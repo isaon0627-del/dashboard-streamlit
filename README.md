@@ -31,6 +31,18 @@ streamlit run app.py
 
 ブラウザで `http://localhost:8501` を開くとダッシュボードを確認できます。
 
+## Streamlit Community Cloud へのデプロイ
+GitHub 連携が完了している前提で、`share.streamlit.io` から以下を設定します。
+
+1. 右上の `アプリを作成する` をクリック
+2. `Repository` にこのリポジトリを選択
+3. `Branch` は `main` を選択
+4. `Main file path` は `app.py` を指定
+5. `Deploy` を実行
+
+デプロイ時は `requirements.txt` が自動で読み込まれます。
+API キーなど機密情報が必要な場合は、Cloud 側の `Secrets` に設定して `st.secrets` から参照してください。
+
 ## データファイル
 - `date/sample-data.csv`
 
